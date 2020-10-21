@@ -1,0 +1,48 @@
+<html>
+  <head>
+       <title>Home Page</title>
+      <style>
+          input{
+              position:relative;
+              left: 30px;
+              font-size: 30px;
+          }
+          .pe{
+              position:relative;
+              left: 53px;  
+          }
+          #message{
+              position:relative;
+              left: 30px; 
+          }
+          
+      
+      </style>
+  </head>
+    <body>
+        <h1>Contact</h1>
+        Full Name:<input type="text" id="fullName" name="fullName"><br><br>
+        E-mail:<input type="text" class="pe" id="email" name="email"><br><br>
+        Phone: <input type="text" class="pe" id="phone" name="phone"><br><br>
+        Meassage: <textarea id="message" name="message"></textarea>
+        <input type="submit" onclick="getMyMessage()" value="Send">
+        
+        <script>
+        function getMyMessage(){
+            var fname=document.getElementById("fullName").value;
+            var email=document.getElementById("email").value;
+            var phone=document.getElementById("phone").value;
+            var message=document.getElementById("message").value;
+            
+            if(fname==""||email==""||phone==""||message==""){
+                alert("You have empty filed. Please fillup, then Submit!!");
+            }else{
+            alert("Full Name: "+fname+"\nEmail: "+email+"\n Phone: "+phone+"\n\n"+message);
+            }
+            
+        }
+        
+        </script>
+
+    </body>
+</html
